@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="27px" viewBox="0 0 26 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Settings Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-8.000000, -7.000000)">
+            <g id="Settings-Icon" transform="translate(8.000000, 7.000000)">
+                <circle id="Oval-5" fill="#E56841" cx="13" cy="13" r="10"></circle>
+                <path d="M12,2.79776202e-14 L14,2.79776202e-14 L14,2.88657986e-14 C15.1045695,2.86628925e-14 16,0.8954305 16,2 L16,24.0635467 L16,24.0635467 C16,25.1681162 15.1045695,26.0635467 14,26.0635467 L12,26.0635467 L12,26.0635467 C10.8954305,26.0635467 10,25.1681162 10,24.0635467 L10,2 L10,2 C10,0.8954305 10.8954305,2.77364371e-14 12,2.7533531e-14 Z" id="Rectangle-7-Copy" fill="#E56841" transform="translate(13.000000, 13.031773) scale(1, -1) translate(-13.000000, -13.031773) "></path>
+                <path d="M12,2.79776202e-14 L14,2.79776202e-14 L14,2.88657986e-14 C15.1045695,2.86628925e-14 16,0.8954305 16,2 L16,24.0635467 L16,24.0635467 C16,25.1681162 15.1045695,26.0635467 14,26.0635467 L12,26.0635467 L12,26.0635467 C10.8954305,26.0635467 10,25.1681162 10,24.0635467 L10,2 L10,2 C10,0.8954305 10.8954305,2.77364371e-14 12,2.7533531e-14 Z" id="Rectangle-7-Copy-2" fill="#E56841" transform="translate(13.000000, 13.031773) scale(1, -1) rotate(60.000000) translate(-13.000000, -13.031773) "></path>
+                <path d="M12,2.79776202e-14 L14,2.79776202e-14 L14,2.88657986e-14 C15.1045695,2.86628925e-14 16,0.8954305 16,2 L16,24.0635467 L16,24.0635467 C16,25.1681162 15.1045695,26.0635467 14,26.0635467 L12,26.0635467 L12,26.0635467 C10.8954305,26.0635467 10,25.1681162 10,24.0635467 L10,2 L10,2 C10,0.8954305 10.8954305,2.77364371e-14 12,2.7533531e-14 Z" id="Rectangle-7-Copy-3" fill="#E56841" transform="translate(13.000000, 13.031773) scale(1, -1) rotate(120.000000) translate(-13.000000, -13.031773) "></path>
+                <circle id="Oval-6" fill="#F2F2F2" cx="13" cy="13" r="6"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

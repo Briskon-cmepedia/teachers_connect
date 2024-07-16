@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Search Button</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="TC-Mobile" transform="translate(-72.000000, -15.000000)">
+            <g id="Search-Button" transform="translate(72.000000, 15.000000)">
+                <rect id="Rectangle-3" fill="#E56841" x="0" y="0" width="45" height="45" rx="6"></rect>
+                <g id="Search-Copy" transform="translate(9.000000, 8.000000)" stroke="#FFFFFF" stroke-width="3">
+                    <g id="Group-6" transform="translate(14.000000, 13.500000) scale(-1, 1) translate(-14.000000, -13.500000) ">
+                        <circle id="Oval-2" cx="17.5" cy="10.5" r="9"></circle>
+                        <path d="M10.5,17.5 L0.837176099,26.1965415" id="Line-2" stroke-linecap="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

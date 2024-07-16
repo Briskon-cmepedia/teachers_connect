@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="127px" height="127px" viewBox="0 0 127 127" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Check</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="8" y="46" width="118" height="14" rx="7"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Account-Created,-Sign-In" transform="translate(-356.000000, -357.000000)">
+            <g id="Check" transform="translate(356.000000, 357.000000)">
+                <circle id="Oval" fill="#4D9009" cx="57.5" cy="69.5" r="57.5"></circle>
+                <g id="Checkmark" transform="translate(20.000000, 0.000000)">
+                    <g id="Rectangle-Copy-2" transform="translate(67.000000, 53.000000) scale(-1, 1) rotate(55.000000) translate(-67.000000, -53.000000) ">
+                        <use fill="#F9CE28" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <rect stroke="#4D9009" stroke-width="3" x="6.5" y="44.5" width="121" height="17" rx="8.5"></rect>
+                    </g>
+                    <rect id="Rectangle" fill="#F9CE28" transform="translate(23.500000, 80.500000) rotate(50.000000) translate(-23.500000, -80.500000) " x="-4" y="73" width="55" height="15" rx="7.5"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

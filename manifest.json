@@ -1,0 +1,25 @@
+{
+  "short_name": "TeachersConnect",
+  "name": "TeachersConnect",
+  "background_color": "#F9CE28",
+  "theme_color": "#F9CE28",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "img/icon-tc-app-48x48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "img/icon-tc-app-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "img/icon-tc-app-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "home.php?utm_source=homescreen"
+}

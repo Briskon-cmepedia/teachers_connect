@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Add Button</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="13" cy="13" r="13"></circle>
+    </defs>
+    <g id="View-Full-Profile-Copy-6" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-702.000000, -564.000000)">
+        <g id="Group-12" transform="translate(448.000000, 115.000000)">
+            <g id="Edit-Profile-Button" transform="translate(221.000000, 406.000000)">
+                <g id="Add-Button" transform="translate(33.000000, 43.000000)">
+                    <g id="Oval">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <circle stroke="#FFFFFF" stroke-width="2" cx="13" cy="13" r="12"></circle>
+                    </g>
+                    <path d="M6.01221989,13 L20,13" id="Line-3" stroke="#E56841" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M13,20 L13,6.01221989" id="Line-3-Copy" stroke="#E56841" stroke-width="2" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

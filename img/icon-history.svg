@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Profile-(Visitor)-Copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-99.000000, -517.000000)">
+        <g id="Group-3" transform="translate(96.000000, 517.000000)">
+            <circle id="Oval-5" stroke="#224F59" stroke-width="3" cx="17.5" cy="14.5" r="13"></circle>
+            <path d="M17.5,14.5 L24.5,10.5" id="Line-2" stroke="#224F59" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M17.5,14.5 L13,12" id="Line-2-Copy" stroke="#224F59" stroke-width="2" stroke-linecap="round"></path>
+            <circle id="Oval-6" stroke="#224F59" fill="#F2F2F2" cx="17.5" cy="14.5" r="1.5"></circle>
+            <rect id="Rectangle" fill="#F2F2F2" x="3" y="15" width="5" height="4"></rect>
+            <path d="M6.7637218,16.6944279 L10.0035165,22.1747379 C10.2845719,22.6501601 10.1270064,23.2634064 9.6515841,23.5444618 C9.49746863,23.6355702 9.32171997,23.6836336 9.14268834,23.6836336 L2.66309896,23.6836336 C2.11081421,23.6836336 1.66309896,23.2359184 1.66309896,22.6836336 C1.66309896,22.504602 1.71116237,22.3288533 1.80227081,22.1747379 L5.0420655,16.6944279 C5.32312087,16.2190057 5.93636715,16.0614402 6.41178941,16.3424956 C6.55688525,16.4282719 6.6779455,16.5493321 6.7637218,16.6944279 Z" id="Triangle" fill="#224F59" transform="translate(5.902972, 19.943400) rotate(-36.000000) translate(-5.902972, -19.943400) "></path>
+        </g>
+    </g>
+</svg>

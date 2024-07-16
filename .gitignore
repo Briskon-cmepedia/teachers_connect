@@ -1,0 +1,8 @@
+.idea/
+vendor
+composer.lock
+*.Dockerfile
+docker-compose.yml
+login.sqlite3
+nginx.conf
+includes/local.php

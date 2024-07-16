@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="17px" viewBox="0 0 16 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Logout Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="TC-Feed-(Menu)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1347.000000, -93.000000)">
+        <g id="Menu" transform="translate(1097.000000, 75.000000)">
+            <g id="Group" transform="translate(251.000000, 19.000000)">
+                <g id="Logout-Icon">
+                    <rect id="Rectangle-4" stroke="#E56841" x="0" y="0" width="10" height="15" rx="1"></rect>
+                    <g id="Group-20" transform="translate(4.000000, 4.000000)">
+                        <rect id="Rectangle-6" fill="#FFDB51" x="4" y="0" width="3" height="7"></rect>
+                        <path d="M0.5,3.5 L10.5,3.5" id="Line" stroke="#E56841" stroke-linecap="round"></path>
+                        <path d="M10.5,3.5 L8.5,1.5" id="Line-4" stroke="#E56841" stroke-linecap="round"></path>
+                        <path d="M10.5,5.5 L8.5,3.5" id="Line-4-Copy" stroke="#E56841" stroke-linecap="round" transform="translate(9.500000, 4.500000) scale(1, -1) translate(-9.500000, -4.500000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

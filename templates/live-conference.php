@@ -1,0 +1,1 @@
+<iframe width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0" allowtransparency="true" src="<?=$conference_url?>" style="border: 1px solid #EEE;border-radius:3px;margin-top:70px;" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" allow="microphone; camera;"></iframe>

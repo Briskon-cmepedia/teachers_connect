@@ -1,0 +1,64 @@
+<?php
+
+class LocalConfig {
+    // Time for an old session to expire before it's no longer valid in seconds
+    const SESSION_OLD_EXPIRE = 60;
+
+    // Time for a session to live before it is replaced in seconds
+    const SESSION_EXPIRE = 60 * 15;
+
+    // Whether to use IP Address checking in session security
+    const SESSION_IP_CHECK = FALSE;
+
+    // Whether this should be a secure https connection or not
+    const SECURE = TRUE;
+
+    //Added by Kiran Singh Date 12/2/2021
+    const FLAG_QUESTIONABLE_ENABLE = 1;
+
+    //verification_link_expire in 1 hr
+    const verification_link_expire = 1;
+
+    // maintenance, staging, production
+    const SERVER = "staging";
+
+    // DB connection (mongodb://HOST_NAME/DB_NAME)
+    const MONGODB = "mongodb://localhost/tc";
+
+    // Where to autoload the PHP libs from
+    const AUTOLOAD_PATH = "vendor/autoload.php";
+
+    // The root directory for the code
+    const ROOT_DIR = '/app';
+
+    // Marketing site url
+    const MARKETING_URL = 'https://staging.teachersconnect.com';
+
+    // Main site url
+    const MAIN_URL = 'http://tc.localhost/';
+
+    // Admin/live site url
+    const LIVE_URL = 'https://staging.teachersconnect.live';
+
+    //AWS credentials
+    const S3URL = "http://teachersconnectdev.s3.amazonaws.com/uploads/";
+
+    //Payment option setting
+    const PAYMENT_SETTING = "courtesy";
+    
+    const ACCESS_KEY = "12345";
+    const SECRET_KEY = "12345";
+    const AWS_ENDPOINT = "http://s3.us-east-1.amazonaws.com/";
+    const BUCKET = "teachersconnectdev";
+    const AWS_REGION = "us-east-1";
+    const AWS_VERSION = "latest";
+
+    // Sendgrid credentials
+    const SENDGRID_KEY = "12345";
+
+    //Open Search
+    const OPENSEARCH_SEARCH_HOST = 'https://localhost:9200';
+    const OPENSEARCH_SEARCH_USER = 'admin';
+    const OPENSEARCH_SEARCH_PASSWORD = 'admin';
+    const OPENSEARCH_USE_SSL = true;
+}

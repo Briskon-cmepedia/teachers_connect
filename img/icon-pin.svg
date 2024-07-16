@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="25px" viewBox="0 0 18 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Location Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Profile-(Visitor)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-385.000000, -176.000000)">
+        <g id="Group-6" transform="translate(165.000000, 105.000000)">
+            <g id="Location-Icon" transform="translate(220.000000, 71.000000)">
+                <path d="M9,24.1549655 C15,17.3653637 18,12.3137085 18,9 C18,4.02943725 13.9705627,0 9,0 C4.02943725,0 0,4.02943725 0,9 C0,12.3137085 3,17.3653637 9,24.1549655 Z" id="Oval-3" fill="#224F59"></path>
+                <circle id="Oval-4" fill="#FFE37A" cx="9" cy="9" r="4"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
