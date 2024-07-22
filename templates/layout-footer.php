@@ -38,7 +38,7 @@
         <li><a target="_blank" rel="noopener" href="<?php echo Config::MARKETING_URL; ?>/terms-of-use/">Terms of Use</a></li>
         <li><a target="_blank" rel="noopener" href="<?php echo Config::MARKETING_URL; ?>/privacy-policy/">Privacy Policy</a></li>
         <li><a target="_blank" rel="noopener" href="<?php echo Config::MARKETING_URL; ?>/2017/08/10/community-guidelines/">Community Guidelines</a></li>
-        <li><a rel="noopener" href="/tour/menu.php">Guided Tour</a></li>
+        <li><a rel="noopener" href="<?=site_url()?>/tour/menu.php">Guided Tour</a></li>
         <li><a target="_blank" rel="noopener" href="<?php echo Config::MARKETING_URL; ?>/support/">Support</a></li>
         <li><a rel="noopener" href="<?=site_url()?>/auth.php?logout=1">Logout</a></li>
       </ul>
@@ -437,7 +437,7 @@
 
  // Push delete data for processing
     $(document).on('click', '#confirm-delete-button, #confirm-leave-button', function() {
-      window.location = "<?php site_url();?>/process.php?type=" + $(this).attr('data-type') + "&id=" + $(this).attr('data-id');
+      window.location = "<?php site_url();?>/tc_app/process.php?type=" + $(this).attr('data-type') + "&id=" + $(this).attr('data-id');
     });
 
     //Back to browsing
@@ -1098,7 +1098,7 @@
             load: function(query, callback) {
                 if (!query.length) return callback();
                 $.ajax({
-                    url: '<?php site_url();?>/names.php',
+                    url: '<?php site_url();?>/tc_app/names.php',
                     type: 'GET',
                     dataType: 'json',
                     data: {
@@ -1181,7 +1181,9 @@
 
   <?php } ?>
 
-  <?php if ($page == 'messages-new') { ?>
+  <?php if ($page == 'messages-new') {
+   
+    ?>
 
     <link rel="stylesheet" type="text/css" href="css/selectize.custom.css">
     <script type="text/javascript" src="js/jquery-ui-1.12.1.custom.min.js"></script>
@@ -1224,7 +1226,7 @@
             load: function(query, callback) {
                 if (!query.length) return callback();
                 $.ajax({
-                    url: '<?php site_url();?>/names.php',
+                    url: '<?php site_url();?>/tc_app/names.php',
                     type: 'GET',
                     dataType: 'json',
                     data: {

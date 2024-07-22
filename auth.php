@@ -2,6 +2,9 @@
 // System Setup
 require 'includes/startup.php';
 
+// echo "hii";
+// exit();
+
 // Variable Setup
 $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 $_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
@@ -67,7 +70,7 @@ if (Config::SERVER != 'maintenance' || (Config::SERVER == 'maintenance' && $_GET
 
     }
     else { // Check and verify credentials if posted
-
+       
         $user_email = strtolower($_POST['user']);
         $pass = $_POST['pass'];
 
@@ -93,17 +96,25 @@ if (Config::SERVER != 'maintenance' || (Config::SERVER == 'maintenance' && $_GET
                 }
                 else {                    
                     // redirect to a post/page if user used a link with a post/page
+                
                     $uri = get_request_uri($user_email);
-                    $redirect_uri = $uri[0] ?? '/tour/topics.php';
-                    redirect($redirect_uri);
+                   // $redirect_uri = $uri[0] ?? '/tc_app/tour/topics.php';
+                    // redirect($redirect_uri);
                     die();
                 }
             }
 
+           
             if ($_GET['location']) {
+                // echo "hme";
+                // print_r($_GET['location']);
+                //  exit();
+              
                 redirect($_GET['location']);
             }
             else {
+                // echo "hme";
+                // exit();
                 redirect('/home.php');
             }
             die();

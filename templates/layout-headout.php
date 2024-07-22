@@ -24,6 +24,7 @@
     <script type="text/javascript" src="js/jquery.modal.min.js" async></script>
     <link rel="stylesheet" type="text/css" href="css/jquery.modal.min.css">
 
+   
     <?php if ($page == 'signup') { ?>
       <link rel="stylesheet" type="text/css" href="css/selectize.custom.css">
     <?php } ?>

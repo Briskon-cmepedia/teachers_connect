@@ -23,6 +23,7 @@ class Sessions {
 
     public function newSession($user) {
         $user_role = $user[0]['role'];
+       
         $this->userId = $user[0]['_id']['$oid'];
         $user_firstName = $user[0]['firstName'];
         $user_lastName = $user[0]['lastName'];
@@ -32,13 +33,14 @@ class Sessions {
         $notification_timestamp = $user[0]['notificationTimestamp']['$date'];
         $user_trusted = $user[0]['trusted'];
         $this->userLastLogin = $user[0]['lastLogin']['$date'] / 1000;
-
+     
         $this->regenerateSession();
 
         // Connect to database
         try {
             $groups = json_decode(json_encode(get_groups()), TRUE);
             $user_groups = json_decode(json_encode(get_groups_by_user($this->userId)), TRUE);
+            
         } catch (Exception $e) {
             echo $e->getMessage();
             die();
@@ -50,14 +52,14 @@ class Sessions {
         $_SESSION['groups'] = [];
         foreach ($user_groups as $group) {
             $_SESSION['partners'][] = [
-                id => $group['_id']['$oid'],
-                name => $group['name'],
-                image => $group['tile'],
+                'id' => $group['_id']['$oid'],
+                'name' => $group['name'],
+                'image' => $group['tile'],
             ];
             $_SESSION['myGroups'][] = $group['_id']['$oid'];
         }
-        foreach ($groups as $group) {
-            $_SESSION['groups'][$group['_id']['$oid']] = $group['name'];
+        foreach ($groups as $group1) {
+            $_SESSION['groups'][$group1['_id']['$oid']] = $group1['name'];
         }
 
         $_SESSION['uid'] = $this->userId;
@@ -79,7 +81,7 @@ class Sessions {
             $new_timestamp = json_decode(json_encode(update_notifications_timestamp()), TRUE);
 
             if ($new_timestamp != FALSE) {
-                $notification_timestamp = $new_timestamp['$date']['$numberLong'];
+                $notification_timestamp = $new_timestamp[$date][$numberLong];
             }
             else {
                 $notification_timestamp = "nothing";
@@ -135,14 +137,17 @@ class Sessions {
     public function sessionCheck() {
         try {
             if (Config::SESSION_IP_CHECK && $_SESSION['userIP'] != $this->userIP) {
+            
                 throw new Exception('IP Address mixmatch (possible session hijacking attempt).');
             }
 
             if ($_SESSION['userAgent'] != $this->userAgent) {
+                
                 throw new Exception('Useragent mixmatch (possible session hijacking attempt).');
             }
 
             if ($_SESSION['OBSOLETE'] && ($_SESSION['OLD_EXPIRES'] < $this->userTime)) {
+               
                 throw new Exception('Attempt to use expired session.');
             } elseif ($_SESSION['OBSOLETE']) {
                 $this->regenerateSession();

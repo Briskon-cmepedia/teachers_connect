@@ -67,7 +67,7 @@
       <?php if ($status != 'ready') { ?>
         <div class="login-form-signup">
           <h2>Not a member?  Join today.</h2>
-          <a href="<?php site_url();?>/refer.php?ref=auth"><button>Sign Up</button></a>
+          <a href="<?= site_url();?>/refer.php?ref=auth"><button> Sign Up</button></a>
         </div>
       <?php } ?>
     </div>
