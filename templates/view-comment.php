@@ -234,7 +234,7 @@ if( Config::FLAG_QUESTIONABLE_ENABLE == 1 && ($userRole=='user'||$userRole=='') 
         } ?>
 
          <div class="file-listing-item" data-id="<?=$file[0]?>" data-name="<?=rawurlencode($file[1])?>">
-           <img class="icon file" src="/img/icon-small-file-<?=$file[2]?>.png">
+           <img class="icon file" src="img/icon-small-file-<?=$file[2]?>.png">
            <?=ucfirst($file[1]) . $filesize?>
            <a class="button right">Download</a>
          </div>

@@ -112,51 +112,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-N25P2GS');</script>
 <!-- End Google Tag Manager -->
     <?php } ?>
-    <style>
-        .top-bar-button-group ,.top-bar-button-group a {
-          font-size: 0.9rem;
-        }
-        .screen-reader-text{
-
-          clip: rect(1px, 1px, 1px, 1px);
-          overflow: hidden;
-          position: absolute !important;
-          height: 1px;
-          width: 1px;
-        }
-        .search-field{
-          cursor: pointer;
-        position: relative;
-        -webkit-transition: width 400ms ease, background 400ms ease;
-        transition: width 400ms ease, background 400ms ease;
-        width: 200px !important;
-        border: 1px solid #A78400 !important;
-        font-size: 15px;
-        height: 32px !important;
-        background: transparent;
-        padding: 0px 10px 0px 30px !important;
-        border-radius: 5px;
-        background-repeat: no-repeat;
-        background-size: 16px;
-        background-position: 7px 7px;
-        }
-        /* #nav-bar,.one { */
-          /* margin-bottom: 10px !important; 
-          height: 50px !important; */
-        /* } */
-        #nav-bar + #nav-bar {
-        margin-top: 70px;
-        margin-bottom: 70px; /* Adjust the spacing as needed */
-      }
-      /* .container {
-      width: 80%;
-      margin: 0 auto;
-      padding-top: 20px;
-    } */
-      
-  </style>
   </head>
- 
   <body class="<?=$page.' '.$view?>">
     <?php if (Config::SERVER == 'staging') {
       echo "<h1 class='server_env'>STAGING</h1>";
@@ -314,49 +270,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </form>
       </div>
     </div>
-    
-     <!-- Start Marketing header - 22-07-2024 -->
 
-    <div id="nav-bar" class="nav-bar-main row one">
-      <div class="header-block header-logo">
-        <ul class="menu-meta-site-links">
-          
-          <!-- <a href="https://qa.teachersconnect.online/"><li class="link-button primary">Login</li></a> -->
-        </ul>
-        <a title="TeachersConnect" href="https://www.teachersconnect.com">
-          <img src="https://staging7.briskon.com/tc-marketing/wp-content/themes/TC-Site/images/logo-tcforteachers.svg" alt="TeachersConnect for Teachers" class="logo">
-        </a>
-      </div>
-
-      <div class="header-block right top-bar-button-group " style="    padding: 25px !important;">
-        <a class="top-bar-button home-button" href="home.php">Home</a>
-        <a class="top-bar-button" href="#">Features</a>
-        <a class="top-bar-button" href="#">Mission</a>
-        <a class="top-bar-button" href="#">Testimonials </a>
-        <a class="top-bar-button" href="#">Blog</a>
-        <a class="top-bar-button" href="#">Support</a>
-
-        <!-- <div class="top-bar-button">
-            <form role="search" method="get" class="search-form" action="https://staging7.briskon.com/tc-marketing/">
-            <label>
-              <span class="screen-reader-text">Search for:</span>
-              <input type="search" class="search-field" placeholder="Search …" value="" name="s">
-            </label>
-            <input type="submit" class="search-submit" value="Search">
-          </form>
-        </div> -->
-
-        <a class="top-bar-button" style="float: right;" href="<?=site_url()?>/auth.php?logout=1">Logout</a>
-      
-      </div>
-    </div>
-
-    <!-- End Marketing header -->
-    
     <div id="nav-bar" class="nav-bar row">
-      <!-- <div class="header-block header-logo">
+      <div class="header-block header-logo">
         <a href="home.php"><img class="logo" alt="TeachersConnect" src="img/tclogo-small.png"></a>
-      </div> -->
+      </div>
 
       <?php if ($_SESSION['access'] == 'yes' && $page !== 'home') { ?>
         <div class="header-block site-search-container">
@@ -417,9 +335,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <?php } ?>
       </div>
     </div>
-    
-
-<div class="clear"></div>
 
     <?php if ($_SESSION['mobile']) { ?>
     <style>#nav-bar{display:none;}</style>

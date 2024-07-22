@@ -33,7 +33,7 @@ function formatEmailReset($reset_start, $user_firstName) {
 // format email for account verification
 function formatEmailVerification($formatEmailVerification='', $user_firstName) {
 	$email_info = [];
-	$email_info['subject'] = "Click the button to join";
+	$email_info['subject'] = "Click the button to join .";
 	
 	$email_info['body'] = "<p>Hi " . $user_firstName . ", <br><br>You're one step away! Click the button to start connecting. It helps us keep the community safe and secure.
 	</i><br><br>
@@ -41,6 +41,16 @@ function formatEmailVerification($formatEmailVerification='', $user_firstName) {
 	</p>";
 
 	$email_info['header'] = "<div style='background: #F9CE28; border-bottom: 1px #D4AA07 solid; text-align: center;'><a href='" . site_url() . "/'><img style='width: 265px; padding: 10px;' alt='TeachersConnect' src='cid:header-logo'></a></div>";
+	
+	// Dynamic template id from sendGrid
+	$email_info['templateId'] = "d-6baad395a4eb4c2e8319ebf1ffd87ec4";
+
+	// Dynamic data from sendGrid
+	$email_info['dynamic_data'] = [
+		"name" => $user_firstName,
+		"action"=> $formatEmailVerification
+	];
+
 	return $email_info;
 }
 
@@ -89,7 +99,17 @@ function formatEmailFlagContent($notification_type, $first_name, $responder_name
 			$subjectText = html_entity_decode($first_name);
 			$email_info['subject'] = "REPORTED VIOLATION: ".$subjectText;
 			$email_info['body'] = "<p>Report Violation Author: ".$first_name."<br><br>Link to content: <br>
-								   <a href='".$link."' target='_blank'>".$link."</a></p>";									
+								   <a href='".$link."' target='_blank'>".$link."</a></p>";	
+			
+			// Dynamic template id from sendGrid
+			$email_info['templateId'] = "d-25ee01e17b624cd786741913b882ed8e";
+
+			// Dynamic data from sendGrid
+			$email_info['dynamic_data'] = [
+				"name" => $first_name,
+				"action"=> $link
+			];
+
 		}else if ($notification_type == "flag post author") {
 			$community_guideline = "https://www.teachersconnect.com/2017/08/10/community-guidelines/";
 			$email_info['subject'] = "Oops! Possible TC Community Guidelines Violation";
@@ -99,6 +119,15 @@ function formatEmailFlagContent($notification_type, $first_name, $responder_name
 			
 			Thank you for your understanding,  <br/><br/>
 			The TC Team</p>";
+
+			// Dynamic template id from sendGrid
+			$email_info['templateId'] = "d-24a223b136fe479cadea86a1ed4bc136";
+
+			// Dynamic data from sendGrid
+			$email_info['dynamic_data'] = [
+				"name" => $first_name,
+				"action"=> site_url() . "/edit-notifications.php"
+			];
 								
 		}else if ($notification_type == "block content") {
 			$community_guideline = "https://www.teachersconnect.com/2017/08/10/community-guidelines/";
@@ -131,13 +160,13 @@ function formatEmailFlagContent($notification_type, $first_name, $responder_name
    
   return $email_info;
 }
-
+// Registration verification mail
 //send notification email -katie
 function sendEmail ($full_name, $email_address, $email_format) {
 
   $email = new \SendGrid\Mail\Mail();
 	$email->addCategory("notification");
-  $email->setFrom("hello@teachersconnect.com", "TeachersConnect");
+  $email->setFrom("lakshmikanth.rk@briskon.com", "TeachersConnect");
   $email->setSubject($email_format['subject']);
   $email->addTo($email_address, $full_name);
 	$email->addContent("text/plain", strip_tags($email_format['body']) . $email_format['footer-plain']);
@@ -151,7 +180,15 @@ function sendEmail ($full_name, $email_address, $email_format) {
 			"header-logo"
 	);
 	//trying sendgrid templates
-	//$email->setTemplateId("d-f5770013045c47dea29d521233a1ad7f");
+	//$email->setTemplateId("d-f5770013045c47dea29d521233a1ad7f"); // old
+
+	$email->setTemplateId($email_format['templateId']);
+
+	// Add dynamic template data from the array
+	foreach ($email_format['dynamic_data'] as $key => $value) {
+		$email->addDynamicTemplateData($key, $value);
+	}
+
   $sendgrid = new \SendGrid(Config::SENDGRID_KEY);
 
     try {

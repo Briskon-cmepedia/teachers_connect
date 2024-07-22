@@ -1161,13 +1161,16 @@ function search_filtered_posts_ordered_relevancy($keywords, $groups, $limit, $of
 		'skip' => $offset
 	]
   );
-
+//   echo '<pre>';
+// 	print_r($query);
 	$cursor = $mongo->executeQuery('tc.posts', $query);
-
+	// print_r($cursor);
 	$posts = [];
 	foreach ($cursor as $document) {
 		array_push($posts, json_decode(MongoDB\BSON\toJSON(MongoDB\BSON\fromPHP($document))));
 	}
+	// print_r($posts);
+	// exit();
 	return $posts;
 }
 

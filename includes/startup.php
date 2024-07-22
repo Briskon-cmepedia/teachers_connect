@@ -4,9 +4,10 @@ require __DIR__ . '/config.php';
 require __DIR__ . '/sessions.php';
 
 $sessions = new Sessions();
+require __DIR__ . '/../vendor/autoload.php';
+//require Config::AUTOLOAD_PATH;  // DO autoload
 
-// require Config::AUTOLOAD_PATH;  // DO autoload
- require_once __DIR__ . '/../vendor/autoload.php';
+
 require __DIR__ . '/searchengine.php';
 require __DIR__ . '/database.php';
 require __DIR__ . '/plates.php';
@@ -14,7 +15,7 @@ require __DIR__ . '/plates.php';
 function site_url() {
     // $protocol = Config::SECURE ? 'https://' : 'http://';
     $protocol = 'http://';
-    return $protocol . $_SERVER['HTTP_HOST'].'/tc_app_new';
+    return $protocol . $_SERVER['HTTP_HOST'].'/tc_app';
 }
 
 function url_build($page) {

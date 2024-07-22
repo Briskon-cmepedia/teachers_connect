@@ -62,7 +62,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     $(document).on('click', '.confirm-validation-popup', function() { 
         var email = $(this).attr('data-id');  
         $.ajax({
-                url: '<?php site_url();?>/tc_app_new/email-resend.php',
+                url: '<?php site_url();?>/email-resend.php',
                 type: 'GET',
                 //dataType: 'json',
                 data: {
@@ -91,7 +91,7 @@ if(isset($_COOKIE['user_email'])){
       Whoops! We've hit a snag. We couldn't validate your account. <br/>
       <?php if(isset($userEmail)){?>
         <a href="javascript:void(0)" class="confirm-validation-popup" data-id="<?php echo $userEmail;?>" >Click here</a> to receive another email and then proceed to your inbox. <br/>Or send a note to 
-        <a href="mailto:lakshmikanth.rk@briskon.com?body=I'm trying to join TeachersConnect and my validation didn't go through.">lakshmikanth.rk@briskon.com</a> and we'll get this figured out ASAP.
+        <a href="mailto:hello@teachersconnect.com?body=I'm trying to join TeachersConnect and my validation didn't go through.">hello@teachersconnect.com</a> and we'll get this figured out ASAP.
       <?php } ?>
     </div>
   </div>

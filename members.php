@@ -28,6 +28,10 @@ if ($sessions->sessionCheck()) { // Display view if user has valid session
       // Connect to database
       try {
         $members_list = json_decode(json_encode(SearchEngine::boot()->search_members($_GET['search'], 30, $offset)), true);
+        echo '<pre>';
+        print_r($members_list);
+        exit();
+        // $members_list = json_decode(json_encode(search_members($_GET['search'], 30, $offset)), true);
       } catch (Exception $e) {
         echo $e->getMessage();
         die();

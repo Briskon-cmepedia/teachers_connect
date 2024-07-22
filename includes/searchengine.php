@@ -12,11 +12,19 @@ class SearchEngine
 
     final public function __construct()
     {
-            $this->client = $this->client ?? ClientBuilder::create()
-                                    ->setHosts([LocalConfig::OPENSEARCH_SEARCH_HOST])  
-                                    ->setBasicAuthentication(LocalConfig::OPENSEARCH_SEARCH_USER, LocalConfig::OPENSEARCH_SEARCH_PASSWORD)
-                                    ->setSSLVerification(LocalConfig::OPENSEARCH_USE_SSL)
-                                    ->build();
+            // $this->client = $this->client ?? ClientBuilder::create()
+            //                         ->setHosts([LocalConfig::OPENSEARCH_SEARCH_HOST])  
+            //                         ->setBasicAuthentication(LocalConfig::OPENSEARCH_SEARCH_USER, LocalConfig::OPENSEARCH_SEARCH_PASSWORD)
+            //                         ->setSSLVerification(LocalConfig::OPENSEARCH_USE_SSL)
+            //                         ->build();
+            // Create Elasticsearch client
+$this->client = $this->client ??  ClientBuilder::create()
+->setHosts([LocalConfig::OPENSEARCH_SEARCH_HOST])
+->setBasicAuthentication(LocalConfig::OPENSEARCH_SEARCH_USER, LocalConfig::OPENSEARCH_SEARCH_PASSWORD)
+->setSSLVerification(LocalConfig::OPENSEARCH_USE_SSL)
+->build();
+
+
     }
 
     public static function boot(): SearchEngine

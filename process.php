@@ -509,18 +509,34 @@ if ($sessions->sessionCheck()) { // Only process if user has valid session
      
   } elseif (($_GET['type'] == "flag_post") AND $_GET['id']) { // flag post if ID supplied
     try {
-      $posts = json_decode(json_encode(get_post( $_GET['id'])), true);      
+      $posts = json_decode(json_encode(get_post( $_GET['id'])), true);   
+      // echo '<pre>';
+      // print_r($posts)   ;
+      // exit();
       if ($posts) {  
+      //    echo '<pre>';
+      // print_r('chck')   ;
+      // exit();
           foreach ($posts as $post) {
             if(isset($post['questionableContent']['flagContent']) && ($post['questionableContent']['flagContent']=='reported'|| $post['questionableContent']['flagContent']=='blocked')){
                 echo 'Something went wrong';
                 die();
             }else {
+      //          echo '<pre>';
+      // print_r('else')   ;
+      // exit();
               $comment_edit = flag_post($_GET['id'], 'reported', $_SESSION['uid']);
+             
               if ($comment_edit == false){
+                // echo '<pre>';
+                // print_r($comment_edit)   ;
+                // exit();
                 echo 'Something went wrong - post update failed!';
                 die();
               } else {
+                // echo '<pre>';
+                // print_r('else')   ;
+                // exit();
                   $activity_data[] = $_GET['id'];
                   $activity_data[] = $post;
                   $activity_data[] = $post['text'];

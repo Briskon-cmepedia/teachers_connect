@@ -71,3 +71,21 @@
         </div>
       <?php } ?>
     </div>
+
+    <div id="site-footer" class="site-footer">
+      <ul class="footer-menu">
+        <li><a target="_blank" rel="noopener" href="<?php echo Config::MARKETING_URL; ?>/terms-of-use/">Terms of Use</a></li>
+        <li><a target="_blank" rel="noopener" href="<?php echo Config::MARKETING_URL; ?>/privacy-policy/">Privacy Policy</a></li>
+        <li><a target="_blank" rel="noopener" href="<?php echo Config::MARKETING_URL; ?>/2017/08/10/community-guidelines/">Community Guidelines</a></li>
+        <li><a href="tour/menu.php">Guided Tour</a></li>
+        <li><a target="_blank" rel="noopener" href="<?php echo Config::MARKETING_URL; ?>/support/">Support</a></li>
+        <!-- <li><a rel="noopener" href="<?=site_url()?>/auth.php?logout=1">Logout</a></li> -->
+      </ul>
+      <div class="footer-note">
+        <div style="float: left;  width:33.33333%;  text-align:left; margin-left:20px">
+          <img alt="Teachers Connect logo" style="width:280px;height:47px;" src="img/TeachersConnect_logo.svg"></div>
+        <div style="float: left; width:33.33333%;  text-align:center;">&nbsp;</div>
+        <div style="float: right; width:33.33333%; text-align:right; margin-right:20px; color: #4C3F06;">© Copyright <?php echo date("Y");?> Public Consulting Group <br/>148 State St. 10<sup>th</sup> Floor Boston, MA 02109 
+        </div>
+      </div>     
+    </div>

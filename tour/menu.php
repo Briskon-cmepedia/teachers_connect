@@ -2,7 +2,8 @@
 // System Setup
 require '../includes/startup.php';
 require '../includes/checkup.php';
-
+echo 'jhdsjhfsdhfsd';
+exit();
 if ($sessions->sessionCheck()) { // Display view if user has valid session
 
 ?>

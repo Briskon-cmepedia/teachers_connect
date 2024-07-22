@@ -53,75 +53,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
   ";
   } ?>
-  <style>
-    .top-bar-button-group ,.top-bar-button-group a {
-      font-size: 0.9rem;
-    }
-    .screen-reader-text{
-
-      clip: rect(1px, 1px, 1px, 1px);
-      overflow: hidden;
-      position: absolute !important;
-      height: 1px;
-      width: 1px;
-    }
-    .search-field{
-      cursor: pointer;
-    position: relative;
-    -webkit-transition: width 400ms ease, background 400ms ease;
-    transition: width 400ms ease, background 400ms ease;
-    width: 200px !important;
-    border: 1px solid #A78400 !important;
-    font-size: 15px;
-    height: 32px !important;
-    background: transparent;
-    padding: 0px 10px 0px 30px !important;
-    border-radius: 5px;
-    background-repeat: no-repeat;
-    background-size: 16px;
-    background-position: 7px 7px;
-    }
-  </style>
   </head>
   <body class="<?=$page?> <?=$block?>"> 
-    <!-- Start Marketing header - 22-07-2024 -->
-
-    <div id="nav-bar" class="nav-bar-main row">
-        <div class="header-block header-logo">
-					<ul class="menu-meta-site-links">
-						
-						<!-- <a href="https://qa.teachersconnect.online/"><li class="link-button primary">Login</li></a> -->
-					</ul>
-					<a title="TeachersConnect" href="https://www.teachersconnect.com">
-            <img src="https://staging7.briskon.com/tc-marketing/wp-content/themes/TC-Site/images/logo-tcforteachers.svg" alt="TeachersConnect for Teachers" class="logo">
-          </a>
-				</div>
-
-      
-        <div class="header-block vertical-middle right top-bar-button-group" style="    padding: 25px !important;">
-          <a class="top-bar-button home-button" href="home.php">Home</a>
-          <a class="top-bar-button" href="#">Features</a>
-          <a class="top-bar-button" href="#">Mission</a>
-          <a class="top-bar-button" href="#">Testimonials </a>
-          <a class="top-bar-button" href="#">Blog</a>
-          <a class="top-bar-button" href="#">Support</a>
-
-          <!-- <div class="top-bar-button">
-              <form role="search" method="get" class="search-form" action="https://staging7.briskon.com/tc-marketing/">
-              <label>
-                <span class="screen-reader-text">Search for:</span>
-                <input type="search" class="search-field" placeholder="Search …" value="" name="s">
-              </label>
-              <input type="submit" class="search-submit" value="Search">
-            </form>
-          </div> -->
-
-        <!-- <a class="top-bar-button" style="float: right;" href="#">Login</a> -->
-          
-        </div>
-    </div>
-
-    <!-- End Marketing header -->
   <script>
     $(document).on('click', '.confirm-validation-popup', function() { 
         var email = $(this).attr('data-id');  

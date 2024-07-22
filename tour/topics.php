@@ -1,15 +1,7 @@
 <?php
 // System Setup
-// require_once __DIR__ . '/../vendor/autoload.php';
 require '../includes/startup.php';
 require '../includes/checkup.php';
-// require '../vendor/autoload.php';
-// echo "hii";
-// exit();
-// require_once __DIR__ . '/../includes/startup.php';
-// require_once __DIR__ . '/../includes/checkup.php';
-// require_once __DIR__ . 'vendor/autoload.php';
-
 
 // echo "hii";
 // exit();

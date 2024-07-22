@@ -159,7 +159,7 @@
       <div class="referral-link">
         <h4 class="referral-title">Your Personal Referral Link:</h4>
         <div class="box-border link-referral">
-          <span class="text-em">https://www.teachersconnect.online/refer.php?ref=<?=$_SESSION['uid']?></span>
+          <span class="text-em"><?=site_url() ?>/refer.php?ref=<?=$_SESSION['uid']?></span>
         </div>
       </div>
     <?php } ?>

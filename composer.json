@@ -9,8 +9,7 @@
         "sendgrid/sendgrid": "^7.0",
         "geoip2/geoip2": "~2.0",
         "mongodb/mongodb": "^1.19",
-        "opensearch-project/opensearch-php": "^2.0",
-        "jenssegers/mongodb": "^3.8",
-        "stripe/stripe-php": "^15.2"
+        "opensearch-project/opensearch-php": "2.0",
+        "jenssegers/mongodb": "^3.8"
     }
 }

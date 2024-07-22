@@ -2,58 +2,9 @@
 // System Setup
 require 'includes/startup.php';
 require 'includes/checkup.php';
-require 'vendor/autoload.php';
-
-
-
 
 if ($sessions->sessionCheck()) { // Display view if user has valid session
 
-
-  $stripe_secret_key = "sk_test_51Pcm7QRul9A8ZSsKPZCYlQCdzXqbg1Rownd3FRJ1cwuUxMz3uWaKbJ8NyRkR93cW2SAIB20QGozIvaplplZzQUqg00Z6q4n8le";
-\Stripe\Stripe::setApiKey($stripe_secret_key);
-$checkout_session = \Stripe\Checkout\Session::create([
-  "mode" => "payment",
-  "success_url" => "http://localhost/tc_app_new/payment-process.php?id={CHECKOUT_SESSION_ID}", 
-  "cancel_url" => "http://localhost/tc_app_new/payment-options.php",
-  "line_items" => [
-    [
-      "quantity" => 1,
-      "price_data" => [
-        "currency" => "usd",
-        "unit_amount" => 24900,
-        "product_data" => [
-          "name" => "Lifetime membership"
-        ]
-      ]
-    ]
-  ]
-]);
-
-
-
-$checkout_session2 = \Stripe\Checkout\Session::create([
-  "mode" => "payment",
-  "success_url" => "http://localhost/tc_app_new/payment-process.php?id={CHECKOUT_SESSION_ID}", 
-  "cancel_url" => "http://localhost/tc_app_new/payment-options.php",
-  "line_items" => [
-    [
-      "quantity" => 1,
-      "price_data" => [
-        "currency" => "usd",
-        "unit_amount" => 4900,
-        "product_data" => [
-          "name" => "Annual membership"
-        ]
-      ]
-    ]
-  ]
-]);
-
-// echo json_encode($checkout_session2);
-
-http_response_code(303);
-// header("Location:". $checkout_session->url);
   // // Determine courtesy status
   // $courtesy = 0;
   //
@@ -171,9 +122,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 <div id="tour-options">
-  <a href="#" onclick="redirectToCheckout2()" role="link"><img src="img/payment-option-1.png"></a>
-  <!-- <a href="#" id="checkout-button-plan_GNYmWve5khT1Gq" role="link"><img src="img/payment-option-2.png"></a> -->
-  <a href="#" onclick="redirectToCheckout()" role="link"><img src="img/payment-option-2.png"></a><br>
+  <a href="#" id="checkout-button-plan_GNYmR2iHCgPhrT" role="link"><img src="img/payment-option-1.png"></a>
+  <a href="#" id="checkout-button-plan_GNYmWve5khT1Gq" role="link"><img src="img/payment-option-2.png"></a>
+  <a href="#" id="checkout-button-sku_GNYfyMxpAH6Djy" role="link"><img src="img/payment-option-3.png"></a><br>
   <div id="error-message"></div>
 </div>
 <div id="tour-footer">
@@ -181,75 +132,65 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Load Stripe.js on your website. -->
 <script src="https://js.stripe.com/v3"></script>
 <script>
-// (function() {
-//   var stripe = Stripe('pk_test_51Pcm7QRul9A8ZSsK9lmU82DKt5qLnXSI2DXsButz01ntb2QQRaOkkreqdxiHGoQImuFwrhsemjOm4VP6BMhiIxki00oFhO2rd0');
-//   var checkoutButton = document.getElementById('checkout-button-plan_GNYmR2iHCgPhrT');
-//   checkoutButton.addEventListener('click', function () {
-//     stripe.redirectToCheckout({
-//       items: [{plan: 'plan_GNYmR2iHCgPhrT', quantity: 1}],
-//       successUrl: '<?=site_url()?>/payment-process.php?id={CHECKOUT_SESSION_ID}',
-//       cancelUrl: '<?=site_url()?>/payment-options.php',
-//     })
-//     .then(function (result) {
-//       if (result.error) {
-//         var displayError = document.getElementById('error-message');
-//         displayError.textContent = result.error.message;
-//       }
-//     });
-//   });
-// })();
-// (function() {
-//   var stripe = Stripe('pk_test_51Pcm7QRul9A8ZSsK9lmU82DKt5qLnXSI2DXsButz01ntb2QQRaOkkreqdxiHGoQImuFwrhsemjOm4VP6BMhiIxki00oFhO2rd0');
-//   var checkoutButton = document.getElementById('checkout-button-plan_GNYmWve5khT1Gq');
-//   checkoutButton.addEventListener('click', function () {
-//     stripe.redirectToCheckout({
-//       items: [{plan: 'plan_GNYmWve5khT1Gq', quantity: 1}],
-//       successUrl: '<?=site_url()?>/payment-process.php?id={CHECKOUT_SESSION_ID}',
-//       cancelUrl: '<?=site_url()?>/payment-options.php',
-//     })
-//     .then(function (result) {
-//       if (result.error) {
-//         var displayError = document.getElementById('error-message');
-//         displayError.textContent = result.error.message;
-//       }
-//     });
-//   });
-// })();
-// (function() {
-//   var stripe = Stripe('pk_test_51Pcm7QRul9A8ZSsK9lmU82DKt5qLnXSI2DXsButz01ntb2QQRaOkkreqdxiHGoQImuFwrhsemjOm4VP6BMhiIxki00oFhO2rd0');
-//   var checkoutButton = document.getElementById('checkout-button-sku_GNYfyMxpAH6Djy');
-//   checkoutButton.addEventListener('click', function () {
-//     stripe.redirectToCheckout({
-//       items: [{sku: 'sku_GNYfyMxpAH6Djy', quantity: 1}],
-//       successUrl: '<?=site_url()?>/payment-process.php?id={CHECKOUT_SESSION_ID}',
-//       cancelUrl: '<?=site_url()?>/payment-options.php',
-//     })
-//     .then(function (result) {
-//       if (result.error) {
-//         var displayError = document.getElementById('error-message');
-//         displayError.textContent = result.error.message;
-//       }
-//     });
-//   });
-// })();
-
-function redirectToCheckout() {
-            var checkoutUrl = "<?php echo $checkout_session->url; ?>";
-            window.location.href = checkoutUrl;
-        }
-
-        function redirectToCheckout2() {
-            var checkoutUrl2 = "<?php echo $checkout_session2->url; ?>";
-            window.location.href = checkoutUrl2;
-        }
+(function() {
+  var stripe = Stripe('pk_live_o7iEWu1YyVgkOoNwrTKVI7uB00ggMWXh9W');
+  var checkoutButton = document.getElementById('checkout-button-plan_GNYmR2iHCgPhrT');
+  checkoutButton.addEventListener('click', function () {
+    stripe.redirectToCheckout({
+      items: [{plan: 'plan_GNYmR2iHCgPhrT', quantity: 1}],
+      successUrl: '<?=site_url()?>/payment-process.php?id={CHECKOUT_SESSION_ID}',
+      cancelUrl: '<?=site_url()?>/payment-options.php',
+    })
+    .then(function (result) {
+      if (result.error) {
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+(function() {
+  var stripe = Stripe('pk_live_o7iEWu1YyVgkOoNwrTKVI7uB00ggMWXh9W');
+  var checkoutButton = document.getElementById('checkout-button-plan_GNYmWve5khT1Gq');
+  checkoutButton.addEventListener('click', function () {
+    stripe.redirectToCheckout({
+      items: [{plan: 'plan_GNYmWve5khT1Gq', quantity: 1}],
+      successUrl: '<?=site_url()?>/payment-process.php?id={CHECKOUT_SESSION_ID}',
+      cancelUrl: '<?=site_url()?>/payment-options.php',
+    })
+    .then(function (result) {
+      if (result.error) {
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+(function() {
+  var stripe = Stripe('pk_live_o7iEWu1YyVgkOoNwrTKVI7uB00ggMWXh9W');
+  var checkoutButton = document.getElementById('checkout-button-sku_GNYfyMxpAH6Djy');
+  checkoutButton.addEventListener('click', function () {
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_GNYfyMxpAH6Djy', quantity: 1}],
+      successUrl: '<?=site_url()?>/payment-process.php?id={CHECKOUT_SESSION_ID}',
+      cancelUrl: '<?=site_url()?>/payment-options.php',
+    })
+    .then(function (result) {
+      if (result.error) {
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
 </script>
 
 <div id="site-footer" class="site-footer col100">
   <ul class="footer-menu">
-    <li><a target="_blank" rel="noopener" href="https://staging7.briskon.com/tc-marketing/terms-of-use/">Terms of Use</a></li>
-    <li><a target="_blank" rel="noopener" href="https://staging7.briskon.com/tc-marketing/privacy-policy/">Privacy Policy</a></li>
-    <li><a target="_blank" rel="noopener" href="https://staging7.briskon.com/tc-marketing/2017/08/10/community-guidelines/">Community Guidelines</a></li>
-    <li><a target="_blank" rel="noopener" href="https://staging7.briskon.com/tc-marketing/support/">Support</a></li>
+    <li><a target="_blank" rel="noopener" href="https://www.teachersconnect.com/terms-of-use/">Terms of Use</a></li>
+    <li><a target="_blank" rel="noopener" href="https://www.teachersconnect.com/privacy-policy/">Privacy Policy</a></li>
+    <li><a target="_blank" rel="noopener" href="https://www.teachersconnect.com/2017/08/10/community-guidelines/">Community Guidelines</a></li>
+    <li><a target="_blank" rel="noopener" href="https://www.teachersconnect.com/support/">Support</a></li>
     <li><a rel="noopener" href="<?=site_url()?>/auth.php?logout=1">Logout</a></li>
   </ul>
   <div class="footer-note">

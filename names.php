@@ -2,6 +2,7 @@
 // System Setup
 require 'includes/startup.php';
 require 'includes/checkup.php';
+
 if ($sessions->sessionCheck()) { // Display view if user has valid session
 
   // Variable Setup

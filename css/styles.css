@@ -301,6 +301,17 @@ body#payment {
   height: 41px;
   width: 71px;
 }
+/* .contribute-dropdown {
+  display: none;
+  position: absolute;
+  background: #ffe37a;
+  border: 1px solid #f9ce28;
+  border-radius: 0px 0px 4px 4px;
+  margin: 10px 0px 0px 90px;
+  font-size: 0.85em;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+} */
+
 .contribute-dropdown {
   display: none;
   position: absolute;
@@ -310,7 +321,14 @@ body#payment {
   margin: 10px 0px 0px 90px;
   font-size: 0.85em;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+  /* z-index: 1000;  Ensure dropdown appears above other elements */
 }
+
+.contribute-dropdown.reveal {
+  display: block; /* Show the dropdown when the reveal class is applied */
+}
+
+
 .contribute-dropdown-option {
   padding: 13px 20px;
   cursor: pointer;
@@ -549,7 +567,7 @@ label,
   background: #f9ce28;
   /* display: flex; */
   align-items: center;
-  margin-top: 40px;
+  margin-top: 100px;
 }
 .login-fail {
   margin-top: 100px;
@@ -1162,6 +1180,19 @@ table.dataTable {
 .followers {
   background: #f2f2f2;
   /*margin-bottom: 40px;*/
+}
+.nav-bar-main {
+  background: #ece8d6;
+  border-bottom: 1px #d4aa07 solid;
+  display: table;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateZ(999999);
+  z-index: 999999;
+  height: 70px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
 }
 .nav-bar {
   background: #f9ce28;

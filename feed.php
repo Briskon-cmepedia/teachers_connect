@@ -44,6 +44,12 @@ if ($sessions->sessionCheck()) { // Display view if user has valid session
           $accessibleGroups[] = $public['_id']['$oid'];
         }
 
+        // echo '<pre>';
+        // print_r($accessibleGroups);
+        // print_r($search_term);
+        // print_r($_GET['search']);
+        // exit();
+
         if ($_GET['sort-order'] == 'newest') {
           $posts = json_decode(json_encode(SearchEngine::boot()->search_filtered_posts_ordered_relevancy($search_term, $accessibleGroups, 30, $offset, 'newest')), true);
         } else {

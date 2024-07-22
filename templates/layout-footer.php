@@ -38,9 +38,9 @@
         <li><a target="_blank" rel="noopener" href="<?php echo Config::MARKETING_URL; ?>/terms-of-use/">Terms of Use</a></li>
         <li><a target="_blank" rel="noopener" href="<?php echo Config::MARKETING_URL; ?>/privacy-policy/">Privacy Policy</a></li>
         <li><a target="_blank" rel="noopener" href="<?php echo Config::MARKETING_URL; ?>/2017/08/10/community-guidelines/">Community Guidelines</a></li>
-        <li><a rel="noopener" href="<?=site_url()?>/tour/menu.php">Guided Tour</a></li>
+        <li><a href="tour/menu.php">Guided Tour</a></li>
         <li><a target="_blank" rel="noopener" href="<?php echo Config::MARKETING_URL; ?>/support/">Support</a></li>
-        <li><a rel="noopener" href="<?=site_url()?>/auth.php?logout=1">Logout</a></li>
+        <!-- <li><a rel="noopener" href="<?=site_url()?>/auth.php?logout=1">Logout</a></li> -->
       </ul>
       <div class="footer-note">
         <div style="float: left;  width:33.33333%;  text-align:left; margin-left:20px">
@@ -382,10 +382,25 @@
     });
 
     // Display options menu for users (posts/profile)
-    $(document).on('click', '.dropdown, .community-dropdown, .sort-dropdown', function() {
+    $(document).on('click', '.community-dropdown, .sort-dropdown', function() {
       $(this).find('.dropdown-content').toggle();
       $(this).toggleClass("dropdown-active");
     });
+    
+    // Toggle dropdown content visibility when clicking on .dropdown
+    // $(document).on('click', '.dropdown', function(e) {
+    //   var dropdownContent = $(this).find('.dropdown-content');
+    //   dropdownContent.slideToggle();
+      // e.stopPropagation(); // Prevent event bubbling
+    // });
+
+    // Close dropdown when clicking outside of it
+    // $(document).on('click', function(e) {
+    //   var dropdownContent = $('.dropdown-content');
+    //   if (!dropdownContent.is(e.target) && dropdownContent.has(e.target).length === 0) {
+    //     dropdownContent.slideUp();
+    //   }
+    // });
 
      $(document).on('click', '.show-flag', function() {
       $(this).find('.dropdown-flag-content').toggle();
@@ -437,7 +452,7 @@
 
  // Push delete data for processing
     $(document).on('click', '#confirm-delete-button, #confirm-leave-button', function() {
-      window.location = "<?php site_url();?>/tc_app_new/process.php?type=" + $(this).attr('data-type') + "&id=" + $(this).attr('data-id');
+      window.location = "<?php site_url();?>process.php?type=" + $(this).attr('data-type') + "&id=" + $(this).attr('data-id');
     });
 
     //Back to browsing
@@ -469,7 +484,7 @@
 
    $(document).on('click', '#confirm-flag-button', function() {     
       $.ajax({
-              url: '<?php site_url();?>/process.php',
+              url: '<?php site_url();?>process.php',
               type: 'GET',
               //dataType: 'json',
               data: {
@@ -517,12 +532,12 @@
 
     // Download files from posts
     $(document).on('click', '.file-listing-item', function(e) {
-      window.location = "<?php site_url();?>/file.php?name=" + $(this).attr('data-name') + "&id=" + $(this).attr('data-id');
+      window.location = "<?php site_url();?>file.php?name=" + $(this).attr('data-name') + "&id=" + $(this).attr('data-id');
     });
 
     // Knock to enter private community
     $(document).on('click', '#private-community-knock', function(e) {
-      window.location = "<?php site_url();?>/edit-affiliate.php?knock=1&id=" + $(this).attr('data-id');
+      window.location = "<?php site_url();?>edit-affiliate.php?knock=1&id=" + $(this).attr('data-id');
     });
 
     // Focus on textarea when answer button clicked
@@ -540,9 +555,22 @@
     });
 
     // Display dropdown options when clicking on Contribute button
-    $(document).on('click', '#button-contribute', function(e) {
-      $('.contribute-dropdown').toggleClass('reveal');
-    });
+    // $(document).on('click', '#button-contribute', function(e) {
+    //   $('.contribute-dropdown').toggleClass('reveal');
+    // });
+    
+  // Toggle dropdown visibility when clicking #button-contribute
+  $(document).on('click', '#button-contribute', function(e) {
+    $('.contribute-dropdown').toggleClass('reveal');
+    e.stopPropagation(); // Prevent event bubbling
+  });
+
+  // Close dropdown when clicking outside of it
+  $(document).on('click', function(e) {
+    if (!$(e.target).closest('.contribute-dropdown').length && !$(e.target).is('#button-contribute')) {
+      $('.contribute-dropdown').removeClass('reveal');
+    }
+  });
 
     // Show preview of images to be uploaded on posts
     $(document).on('change', '#FileUpload1, #FileUpload2, #FileUpload3, #FileUpload4, #FileUpload5, #FileUpload6, #FileUpload7, #FileUpload8, #FileUpload9, #FileUpload10, #FileUpload11, #FileUpload12', function(){
@@ -1098,7 +1126,7 @@
             load: function(query, callback) {
                 if (!query.length) return callback();
                 $.ajax({
-                    url: '<?php site_url();?>/tc_app_new/names.php',
+                    url: '<?php site_url();?>/names.php',
                     type: 'GET',
                     dataType: 'json',
                     data: {
@@ -1181,9 +1209,7 @@
 
   <?php } ?>
 
-  <?php if ($page == 'messages-new') {
-   
-    ?>
+  <?php if ($page == 'messages-new') { ?>
 
     <link rel="stylesheet" type="text/css" href="css/selectize.custom.css">
     <script type="text/javascript" src="js/jquery-ui-1.12.1.custom.min.js"></script>
@@ -1226,7 +1252,7 @@
             load: function(query, callback) {
                 if (!query.length) return callback();
                 $.ajax({
-                    url: '<?php site_url();?>/tc_app_new/names.php',
+                    url: '<?php site_url();?>/names.php',
                     type: 'GET',
                     dataType: 'json',
                     data: {

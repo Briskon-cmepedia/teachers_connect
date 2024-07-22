@@ -81,7 +81,7 @@ class Sessions {
             $new_timestamp = json_decode(json_encode(update_notifications_timestamp()), TRUE);
 
             if ($new_timestamp != FALSE) {
-                $notification_timestamp = $new_timestamp[$date][$numberLong];
+                $notification_timestamp = $new_timestamp['$date']['$numberLong'];
             }
             else {
                 $notification_timestamp = "nothing";
