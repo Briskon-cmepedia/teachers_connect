@@ -3,8 +3,7 @@
 require '../includes/startup.php';
 require '../includes/checkup.php';
 
-// echo "hii";
-// exit();
+
 if ($sessions->sessionCheck()) { // Display view if user has valid session
 
   if($_SERVER['REQUEST_METHOD'] == 'POST') { // If posted interests, update profile and redirect to tour

@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+          {
+            "appID": "H293MYY43H.com.teachersconnect.teachersconnect",
+            "paths": [ "/feed.php", "/profile.php", "/view.php", "/view.php", "/edit-notifications.php", "/account-verify.php" ]
+          }
+        ]
+    }
+}

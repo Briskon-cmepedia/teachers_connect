@@ -111,18 +111,14 @@ if ($sessions->sessionCheck()) { // Display view if user has valid session
         $photos_display = [];
         $file_display = [];
         $file_attachments = $post[0]['photos'];
-        // print_r($file_attachments);
-        // exit();
 
         // Collate file attachments for display
         foreach ($file_attachments as $file_attachment) {
-           
+
           if (is_array($file_attachment)) {
 
               if (in_array($file_attachment[2], $image_filetypes) ) {
-                
                 $photos_display[] = array($file_attachment[0], $file_attachment[1], 'image.php?id='.$file_attachment[0].'&height=400', 'image.php?id='.$file_attachment[0].'&height=900');
-               
               }
 
               if (in_array($file_attachment[2], $pdf_filetypes) ) {
@@ -443,9 +439,6 @@ if ($sessions->sessionCheck()) { // Display view if user has valid session
   $REQUEST_URI = $_SERVER['REQUEST_URI'];
   $url = $HTTPS . "://$_SERVER[HTTP_HOST]$REQUEST_URI";
   $path = parse_url($url, PHP_URL_PATH);
-
-  // print_r($path);
-  // exit();
   echo $path.' '.$_GET['id'];
   if ($path && $_GET['id']) {
     save_request_uri($REQUEST_URI); // store request uri
