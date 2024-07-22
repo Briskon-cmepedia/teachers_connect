@@ -437,7 +437,7 @@
 
  // Push delete data for processing
     $(document).on('click', '#confirm-delete-button, #confirm-leave-button', function() {
-      window.location = "<?php site_url();?>/tc_app/process.php?type=" + $(this).attr('data-type') + "&id=" + $(this).attr('data-id');
+      window.location = "<?php site_url();?>/tc_app_new/process.php?type=" + $(this).attr('data-type') + "&id=" + $(this).attr('data-id');
     });
 
     //Back to browsing
@@ -1098,7 +1098,7 @@
             load: function(query, callback) {
                 if (!query.length) return callback();
                 $.ajax({
-                    url: '<?php site_url();?>/tc_app/names.php',
+                    url: '<?php site_url();?>/tc_app_new/names.php',
                     type: 'GET',
                     dataType: 'json',
                     data: {
@@ -1226,7 +1226,7 @@
             load: function(query, callback) {
                 if (!query.length) return callback();
                 $.ajax({
-                    url: '<?php site_url();?>/tc_app/names.php',
+                    url: '<?php site_url();?>/tc_app_new/names.php',
                     type: 'GET',
                     dataType: 'json',
                     data: {

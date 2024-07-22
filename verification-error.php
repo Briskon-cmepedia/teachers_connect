@@ -62,7 +62,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     $(document).on('click', '.confirm-validation-popup', function() { 
         var email = $(this).attr('data-id');  
         $.ajax({
-                url: '<?php site_url();?>/tc_app/email-resend.php',
+                url: '<?php site_url();?>/tc_app_new/email-resend.php',
                 type: 'GET',
                 //dataType: 'json',
                 data: {

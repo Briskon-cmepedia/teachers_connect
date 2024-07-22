@@ -14,8 +14,8 @@ if ($sessions->sessionCheck()) { // Display view if user has valid session
 \Stripe\Stripe::setApiKey($stripe_secret_key);
 $checkout_session = \Stripe\Checkout\Session::create([
   "mode" => "payment",
-  "success_url" => "http://localhost/tc_app/payment-process.php?id={CHECKOUT_SESSION_ID}", 
-  "cancel_url" => "http://localhost/tc_app/payment-options.php",
+  "success_url" => "http://localhost/tc_app_new/payment-process.php?id={CHECKOUT_SESSION_ID}", 
+  "cancel_url" => "http://localhost/tc_app_new/payment-options.php",
   "line_items" => [
     [
       "quantity" => 1,
@@ -34,8 +34,8 @@ $checkout_session = \Stripe\Checkout\Session::create([
 
 $checkout_session2 = \Stripe\Checkout\Session::create([
   "mode" => "payment",
-  "success_url" => "http://localhost/tc_app/payment-process.php?id={CHECKOUT_SESSION_ID}", 
-  "cancel_url" => "http://localhost/tc_app/payment-options.php",
+  "success_url" => "http://localhost/tc_app_new/payment-process.php?id={CHECKOUT_SESSION_ID}", 
+  "cancel_url" => "http://localhost/tc_app_new/payment-options.php",
   "line_items" => [
     [
       "quantity" => 1,

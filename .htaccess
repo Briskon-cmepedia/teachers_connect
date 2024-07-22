@@ -10,4 +10,4 @@ RewriteRule ^(.*)$ index.php [QSA,L]
 
 
 # RewriteEngine On
-# RewriteRule ^tc_app/(.*)$ /$1 [L,R=301]
+# RewriteRule ^tc_app_new/(.*)$ /$1 [L,R=301]

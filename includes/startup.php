@@ -14,7 +14,7 @@ require __DIR__ . '/plates.php';
 function site_url() {
     // $protocol = Config::SECURE ? 'https://' : 'http://';
     $protocol = 'http://';
-    return $protocol . $_SERVER['HTTP_HOST'].'/tc_app';
+    return $protocol . $_SERVER['HTTP_HOST'].'/tc_app_new';
 }
 
 function url_build($page) {

@@ -98,7 +98,7 @@ if (Config::SERVER != 'maintenance' || (Config::SERVER == 'maintenance' && $_GET
                     // redirect to a post/page if user used a link with a post/page
                 
                     $uri = get_request_uri($user_email);
-                   // $redirect_uri = $uri[0] ?? '/tc_app/tour/topics.php';
+                   // $redirect_uri = $uri[0] ?? '/tc_app_new/tour/topics.php';
                     // redirect($redirect_uri);
                     die();
                 }
