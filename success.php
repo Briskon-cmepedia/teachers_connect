@@ -74,7 +74,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 <div id="tour-options">
-  <a class="button" href="tour/topics.php">Continue</a>
+  <a class="button" href="<?=site_url()?>/tour/topics.php">Continue</a>
 </div>
 <div id="tour-footer">
   <div class="col25">

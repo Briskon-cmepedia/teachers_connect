@@ -2,12 +2,22 @@
 // $templates = new League\Plates\Engine('/var/www/html/templates');
 //$templates = new League\Plates\Engine('/var/www/html/templates');
 
-$templates = new League\Plates\Engine(Config::ROOT_DIR . '/templates');
+// $templates = new League\Plates\Engine(Config::ROOT_DIR . '/templates');
 // if(!property_exists($templates)){echo "1--";
 //   $templates = new League\Plates\Engine('../templates');
 // }
 
-//$templates = new League\Plates\Engine('../templates');
+$url = $_SERVER['REQUEST_URI'];
+$path = parse_url($url, PHP_URL_PATH);
+$segments = explode('/', trim($path, '/'));
+if($segments[1] == 'tour'){
+  $templates = new League\Plates\Engine('../templates');
+}else{
+  $templates = new League\Plates\Engine('./templates');
+}
+
+
+
 
 // Register Plates functions
 $templates->registerFunction('generate_photos', function () {

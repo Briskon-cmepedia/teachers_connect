@@ -1,9 +1,18 @@
 <?php
 // System Setup
+// require_once __DIR__ . '/../vendor/autoload.php';
 require '../includes/startup.php';
 require '../includes/checkup.php';
+// require '../vendor/autoload.php';
+// echo "hii";
+// exit();
+// require_once __DIR__ . '/../includes/startup.php';
+// require_once __DIR__ . '/../includes/checkup.php';
+// require_once __DIR__ . 'vendor/autoload.php';
 
 
+// echo "hii";
+// exit();
 if ($sessions->sessionCheck()) { // Display view if user has valid session
 
   if($_SERVER['REQUEST_METHOD'] == 'POST') { // If posted interests, update profile and redirect to tour

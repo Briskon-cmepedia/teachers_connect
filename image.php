@@ -14,6 +14,8 @@ if ((Config::SERVER !== 'maintenance') || ((Config::SERVER === 'maintenance') &&
 
     $s3Service = new S3Service();
     $remoteFileName = Config::S3URL . $_GET['id'];
+    // print_r($remoteFileName);
+    // exit();
     $fileName = ltrim(parse_url($remoteFileName, PHP_URL_PATH), '/');
     
     $imageBlob = $s3Service->getImageStream($fileName);

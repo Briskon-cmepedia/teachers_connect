@@ -1,0 +1,36 @@
+[Sat Jun 01 00:00:27.511978 2024] [mpm_prefork:notice] [pid 442] AH00163: Apache/2.4.52 (Ubuntu) configured -- resuming normal operations
+[Sat Jun 01 00:00:27.512002 2024] [core:notice] [pid 442] AH00094: Command line: '/usr/sbin/apache2'
+[Sat Jun 01 06:50:44.828198 2024] [mpm_prefork:notice] [pid 442] AH00170: caught SIGWINCH, shutting down gracefully
+[Sat Jun 01 06:51:28.941985 2024] [mpm_prefork:notice] [pid 429] AH00163: Apache/2.4.52 (Ubuntu) configured -- resuming normal operations
+[Sat Jun 01 06:51:29.043734 2024] [core:notice] [pid 429] AH00094: Command line: '/usr/sbin/apache2'
+[Sat Jun 01 06:53:39.332009 2024] [php7:error] [pid 458] [client 49.207.243.224:44051] PHP Fatal error:  Uncaught MongoDB\\Driver\\Exception\\ConnectionTimeoutException: No suitable servers found (`serverSelectionTryOnce` set): [connection refused calling hello on '3.111.105.174:27017'] in /var/www/html/tc_app/includes/database.php:2711\nStack trace:\n#0 /var/www/html/tc_app/includes/database.php(2711): MongoDB\\Driver\\Manager->executeBulkWrite()\n#1 /var/www/html/tc_app/includes/sessions.php(163): new_activity_log()\n#2 /var/www/html/tc_app/home.php(8): Sessions->sessionCheck()\n#3 {main}\n  thrown in /var/www/html/tc_app/includes/database.php on line 2711
+[Sat Jun 01 06:58:37.976827 2024] [mpm_prefork:notice] [pid 429] AH00171: Graceful restart requested, doing restart
+[Sat Jun 01 06:58:38.052448 2024] [mpm_prefork:notice] [pid 429] AH00163: Apache/2.4.52 (Ubuntu) configured -- resuming normal operations
+[Sat Jun 01 06:58:38.052461 2024] [core:notice] [pid 429] AH00094: Command line: '/usr/sbin/apache2'
+[Sat Jun 01 06:59:02.834525 2024] [mpm_prefork:notice] [pid 429] AH00170: caught SIGWINCH, shutting down gracefully
+[Sat Jun 01 06:59:02.945518 2024] [mpm_prefork:notice] [pid 1068] AH00163: Apache/2.4.52 (Ubuntu) configured -- resuming normal operations
+[Sat Jun 01 06:59:02.945556 2024] [core:notice] [pid 1068] AH00094: Command line: '/usr/sbin/apache2'
+[Sat Jun 01 07:05:28.127896 2024] [mpm_prefork:notice] [pid 1068] AH00170: caught SIGWINCH, shutting down gracefully
+[Sat Jun 01 07:05:28.264202 2024] [mpm_prefork:notice] [pid 1219] AH00163: Apache/2.4.52 (Ubuntu) configured -- resuming normal operations
+[Sat Jun 01 07:05:28.264242 2024] [core:notice] [pid 1219] AH00094: Command line: '/usr/sbin/apache2'
+[Sat Jun 01 07:07:05.766721 2024] [mpm_prefork:notice] [pid 1219] AH00170: caught SIGWINCH, shutting down gracefully
+[Sat Jun 01 07:07:05.884474 2024] [mpm_prefork:notice] [pid 1301] AH00163: Apache/2.4.52 (Ubuntu) configured -- resuming normal operations
+[Sat Jun 01 07:07:05.884529 2024] [core:notice] [pid 1301] AH00094: Command line: '/usr/sbin/apache2'
+[Sat Jun 01 07:14:28.968389 2024] [mpm_prefork:notice] [pid 1301] AH00170: caught SIGWINCH, shutting down gracefully
+[Sat Jun 01 07:14:29.101753 2024] [mpm_prefork:notice] [pid 1461] AH00163: Apache/2.4.52 (Ubuntu) configured -- resuming normal operations
+[Sat Jun 01 07:14:29.101792 2024] [core:notice] [pid 1461] AH00094: Command line: '/usr/sbin/apache2'
+[Sat Jun 01 07:40:23.309716 2024] [php7:notice] [pid 1470] [client 49.207.243.224:45261] Initial GET parameters: {"location":"\\/tc_app\\/home.php"}
+[Sat Jun 01 07:40:23.311312 2024] [php7:notice] [pid 1470] [client 49.207.243.224:45261] Initial POST parameters: null
+[Sat Jun 01 07:40:24.734766 2024] [php7:notice] [pid 1470] [client 49.207.243.224:45261] Initial GET parameters: {"location":"\\/tc_app\\/home.php"}
+[Sat Jun 01 07:40:24.734791 2024] [php7:notice] [pid 1470] [client 49.207.243.224:45261] Initial POST parameters: null
+[Sat Jun 01 07:40:27.237808 2024] [php7:notice] [pid 1464] [client 49.207.243.224:43514] Initial GET parameters: {"location":"\\/tc_app\\/home.php"}, referer: http://tc1.briskon.com/tc_app/auth.php?location=%2Ftc_app%2Fhome.php
+[Sat Jun 01 07:40:27.237840 2024] [php7:notice] [pid 1464] [client 49.207.243.224:43514] Initial POST parameters: {"user":"eliza@teachersconnect.com","pass":"12345678"}, referer: http://tc1.briskon.com/tc_app/auth.php?location=%2Ftc_app%2Fhome.php
+[Sat Jun 01 07:40:27.368554 2024] [php7:notice] [pid 1464] [client 49.207.243.224:43514] Redirecting to GET location: /tc_app/home.php, referer: http://tc1.briskon.com/tc_app/auth.php?location=%2Ftc_app%2Fhome.php
+[Sat Jun 01 07:42:40.117101 2024] [mpm_prefork:notice] [pid 1461] AH00170: caught SIGWINCH, shutting down gracefully
+[Sat Jun 01 07:42:40.455577 2024] [mpm_prefork:notice] [pid 1929] AH00163: Apache/2.4.52 (Ubuntu) configured -- resuming normal operations
+[Sat Jun 01 07:42:40.455616 2024] [core:notice] [pid 1929] AH00094: Command line: '/usr/sbin/apache2'
+[Sat Jun 01 07:43:01.190013 2024] [php7:notice] [pid 1932] [client 49.207.243.224:44407] Initial GET parameters: {"location":"\\/tc_app\\/home.php"}
+[Sat Jun 01 07:43:01.190033 2024] [php7:notice] [pid 1932] [client 49.207.243.224:44407] Initial POST parameters: null
+[Sat Jun 01 07:43:10.544243 2024] [php7:notice] [pid 1931] [client 49.207.243.224:43514] Initial GET parameters: {"location":"\\/tc_app\\/home.php"}, referer: http://tc1.briskon.com/tc_app/auth.php?location=%2Ftc_app%2Fhome.php
+[Sat Jun 01 07:43:10.544273 2024] [php7:notice] [pid 1931] [client 49.207.243.224:43514] Initial POST parameters: {"user":"eliza@teachersconnect.com","pass":"12345678"}, referer: http://tc1.briskon.com/tc_app/auth.php?location=%2Ftc_app%2Fhome.php
+[Sat Jun 01 07:43:10.616529 2024] [php7:notice] [pid 1931] [client 49.207.243.224:43514] Redirecting to GET location: /tc_app/home.php, referer: http://tc1.briskon.com/tc_app/auth.php?location=%2Ftc_app%2Fhome.php

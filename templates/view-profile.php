@@ -24,7 +24,8 @@
         <div class="user-profile-row">
           <div class="profile-left profile-block">
             <div class="post-header profile-pic">
-              <?php if ( (strpos($user_avatar, 'Object') == false) AND ($user_avatar != NULL) ) { ?>
+              <?php 
+              if ( (strpos($user_avatar, 'Object') == false) AND ($user_avatar != NULL) ) { ?>
 
                   <img class="avatar large" alt="avatar" src="image.php?id=<?=$user_avatar?>&height=300">
 

@@ -3,7 +3,11 @@
 require 'includes/startup.php';
 require 'includes/checkup.php';
 
+// print_r($sessions->sessionCheck());
+// echo "hii";
+// exit();
 if ($sessions->sessionCheck()) { // Display view if user has valid session
+
 
   // Variable Setup
   $_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
@@ -27,6 +31,7 @@ if ($sessions->sessionCheck()) { // Display view if user has valid session
   
     
     $posts['popularposts'] = $postsPopular;
+
 
     // Get latest posts from TC community
     try {
@@ -396,7 +401,8 @@ if ($sessions->sessionCheck()) { // Display view if user has valid session
   }
 
 } else { // Redirect user to login page if no valid session
-
+//  echo "hii";
+//  exit();
   redirect('/auth.php?location=' . urlencode($_SERVER['REQUEST_URI']));
 
 }
