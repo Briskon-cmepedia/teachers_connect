@@ -171,8 +171,7 @@ function sendEmail ($full_name, $email_address, $email_format) {
 function sendEmailTemplate ($full_name, $email_address, $email_format, $template_id) {
 
   $email = new \SendGrid\Mail\Mail();
-//   $email->setFrom("hello@teachersconnect.com", "TeachersConnect");
-  $email->setFrom("lakshmikanth.rk@briskon.com", "TeachersConnect");
+  $email->setFrom("hello@teachersconnect.com", "TeachersConnect");
   $email->setSubject($email_format['subject']);
   $email->addTo($email_address, $full_name);
 	$email->addContent("text/plain", strip_tags($email_format['body']) . $email_format['footer-plain']);
@@ -188,15 +187,14 @@ function sendEmailTemplate ($full_name, $email_address, $email_format, $template
 			"header-logo"
 	);
 	//trying sendgrid templates
-	// $email->setTemplateId("d-f5770013045c47dea29d521233a1ad7f");
-	$email->setTemplateId("d-687af4be327044dda05f10babb2990b6");
+	$email->setTemplateId("d-f5770013045c47dea29d521233a1ad7f");
   $sendgrid = new \SendGrid(Config::SENDGRID_KEY);
 
     try {
         $response = $sendgrid->send($email);
-        print $response->statusCode() . "\n";
-        print_r($response->headers());
-        print $response->body() . "\n";
+        //print $response->statusCode() . "\n";
+        //print_r($response->headers());
+        //print $response->body() . "\n";
     } catch (Exception $e) {
         //echo 'Caught exception: ',  $e->getMessage(), "\n";
         echo 'Something went wrong';

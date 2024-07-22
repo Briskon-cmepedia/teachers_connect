@@ -90,5 +90,3 @@ if ($_SESSION['uid']) {
     die();
   }
 }
-
-

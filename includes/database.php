@@ -1828,7 +1828,6 @@ function read_user_trust($uid) {
 	foreach ($cursor as $document) {
 		array_push($user, json_decode(MongoDB\BSON\toJSON(MongoDB\BSON\fromPHP($document))));
 	}
-	
   return $user;
 }
 

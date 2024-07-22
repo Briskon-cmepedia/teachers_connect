@@ -133,7 +133,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="https://js.stripe.com/v3"></script>
 <script>
 (function() {
-  var stripe = Stripe('pk_test_51Pcm7QRul9A8ZSsK9lmU82DKt5qLnXSI2DXsButz01ntb2QQRaOkkreqdxiHGoQImuFwrhsemjOm4VP6BMhiIxki00oFhO2rd0');
+  var stripe = Stripe('pk_live_o7iEWu1YyVgkOoNwrTKVI7uB00ggMWXh9W');
   var checkoutButton = document.getElementById('checkout-button-plan_GNYmR2iHCgPhrT');
   checkoutButton.addEventListener('click', function () {
     stripe.redirectToCheckout({
@@ -150,7 +150,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
 })();
 (function() {
-  var stripe = Stripe('pk_test_51Pcm7QRul9A8ZSsK9lmU82DKt5qLnXSI2DXsButz01ntb2QQRaOkkreqdxiHGoQImuFwrhsemjOm4VP6BMhiIxki00oFhO2rd0');
+  var stripe = Stripe('pk_live_o7iEWu1YyVgkOoNwrTKVI7uB00ggMWXh9W');
   var checkoutButton = document.getElementById('checkout-button-plan_GNYmWve5khT1Gq');
   checkoutButton.addEventListener('click', function () {
     stripe.redirectToCheckout({
@@ -167,7 +167,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
 })();
 (function() {
-  var stripe = Stripe('pk_test_51Pcm7QRul9A8ZSsK9lmU82DKt5qLnXSI2DXsButz01ntb2QQRaOkkreqdxiHGoQImuFwrhsemjOm4VP6BMhiIxki00oFhO2rd0');
+  var stripe = Stripe('pk_live_o7iEWu1YyVgkOoNwrTKVI7uB00ggMWXh9W');
   var checkoutButton = document.getElementById('checkout-button-sku_GNYfyMxpAH6Djy');
   checkoutButton.addEventListener('click', function () {
     stripe.redirectToCheckout({
@@ -187,10 +187,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div id="site-footer" class="site-footer col100">
   <ul class="footer-menu">
-    <li><a target="_blank" rel="noopener" href="https://staging7.briskon.com/tc-marketing/terms-of-use/">Terms of Use</a></li>
-    <li><a target="_blank" rel="noopener" href="https://staging7.briskon.com/tc-marketing/privacy-policy/">Privacy Policy</a></li>
-    <li><a target="_blank" rel="noopener" href="https://staging7.briskon.com/tc-marketing/2017/08/10/community-guidelines/">Community Guidelines</a></li>
-    <li><a target="_blank" rel="noopener" href="https://staging7.briskon.com/tc-marketing/support/">Support</a></li>
+    <li><a target="_blank" rel="noopener" href="https://www.teachersconnect.com/terms-of-use/">Terms of Use</a></li>
+    <li><a target="_blank" rel="noopener" href="https://www.teachersconnect.com/privacy-policy/">Privacy Policy</a></li>
+    <li><a target="_blank" rel="noopener" href="https://www.teachersconnect.com/2017/08/10/community-guidelines/">Community Guidelines</a></li>
+    <li><a target="_blank" rel="noopener" href="https://www.teachersconnect.com/support/">Support</a></li>
     <li><a rel="noopener" href="<?=site_url()?>/auth.php?logout=1">Logout</a></li>
   </ul>
   <div class="footer-note">
